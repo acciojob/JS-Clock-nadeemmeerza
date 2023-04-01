@@ -6,7 +6,7 @@ setInterval(()=>{
 	let min = now.getMinutes();
 	let hour = now.getHours();
 	document.getElementsByClassName("hour-hand")[0].style.transform = 
-		"rotate("+(((hour % 12) + (min / 60)) * 30(Math.PI/180+"deg)";
+		"rotate("+(((hour % 12) + (min / 60)) * 30)*Math.PI/180+"deg)";
 	document.getElementsByClassName("min-hand")[0].style.transform =
 		"rotate("+(min+(sec/60))*6+"deg)";
 	document.getElementsByClassName("second-hand")[0].style.transform = 
