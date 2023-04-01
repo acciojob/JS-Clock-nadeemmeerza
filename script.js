@@ -9,10 +9,10 @@ function clock(){
 	// 30 degrees per hour = pi/6 radians
   // var hourAngle = ((hours % 12) + (minutes / 60)) * (Math.PI / 6); 
   var hourAngle = ((hours * 30) + (minutes / 2)) * (Math.PI / 180); 
-	// 6 degrees per minute = pi/30 radians
-  var minuteAngle = (minutes + (seconds / 60)) * (Math.PI / 30); 
+	// 1 degrees per minute = pi/180 radians
+  var minuteAngle = (minutes *6 + 90 )* (Math.PI / 180); 
 	// 6 degrees per second = pi/30 radians
-  var secondAngle = seconds * (Math.PI / 30); 
+  var secondAngle = seconds ; 
 
   // Rotate each hand to the correct angle
   var hourHand = document.getElementsByClassName("hour-hand")[0];
