@@ -1,13 +1,14 @@
 //your code here
 function clock(){
-	var now = new Date();
+	const now = new Date();
 
-  var hours = now.getHours();
-  var minutes = now.getMinutes();
-  var seconds = now.getSeconds();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
   // Calculate the angle of each hand in radians
 	// 30 degrees per hour = pi/6 radians
-  var hourAngle = ((hours % 12) + (minutes / 60)) * (Math.PI / 6); 
+  // var hourAngle = ((hours % 12) + (minutes / 60)) * (Math.PI / 6); 
+  var hourAngle = ((hours * 30) + (minutes / 2)) * (Math.PI / 180); 
 	// 6 degrees per minute = pi/30 radians
   var minuteAngle = (minutes + (seconds / 60)) * (Math.PI / 30); 
 	// 6 degrees per second = pi/30 radians
